@@ -27,7 +27,7 @@ public class SymbolNode
 
 	/**
 	 * Returns a textual representation of the Node. If your Symbol Tree was
-	 * parsed from an input string as specified by the RoboCup Server Manual,
+	 * parsed from an input string of a proper S-expression,
 	 * this output should always be identical to your input.
 	 */
 	@Override

@@ -8,18 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Parses a symbol string as specified by the RoboCup Server Manual into a Tree
- * consisting of SymbolNode and String objects.
+ * Parses an s-expression string into a Tree consisting of SymbolNode and String objects.
  *
  * @author Simon Raffeiner
  */
 public class SymbolTreeParser
 {
 	/**
-	 * Parse a symbol string as specified by the RoboCup Manual into a Symbol
-	 * tree.
+	 * Parse an s-expression string into a Symbol tree.
 	 *
-	 * @param input String formed according to the RoboCup manual
+	 * @param input String to parse
 	 * @return Generated Symbol tree
 	 * @throws IllegalSymbolInputException if illegal symbols are found in the
 	 *         input stream
@@ -53,7 +51,7 @@ public class SymbolTreeParser
 	 * The three "C" tokens are added 6. The function returns from the recursive
 	 * calls 7. Token "A" is added
 	 *
-	 * @param string String formed according to the RoboCup manual
+	 * @param string String to parse
 	 * @return Generated Symbol tree
 	 * @throws IllegalSymbolInputException if illegal symbols are found in the
 	 *         input stream
