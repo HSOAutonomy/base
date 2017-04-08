@@ -2,6 +2,7 @@
  * For a list of authors see README.md
  * This software of HSOAutonomy is released under MIT License (see LICENSE).
  */
+
 package hso.autonomy.util.misc;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
