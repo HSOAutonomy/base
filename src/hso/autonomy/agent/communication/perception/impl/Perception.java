@@ -12,10 +12,12 @@ import java.util.stream.Collectors;
 import hso.autonomy.agent.communication.perception.IAccelerometerPerceptor;
 import hso.autonomy.agent.communication.perception.ICommandPerceptor;
 import hso.autonomy.agent.communication.perception.ICompassPerceptor;
+import hso.autonomy.agent.communication.perception.ICompositeJointPerceptor;
 import hso.autonomy.agent.communication.perception.IFlagPerceptor;
 import hso.autonomy.agent.communication.perception.IForceResistancePerceptor;
 import hso.autonomy.agent.communication.perception.IGlobalPosePerceptor;
 import hso.autonomy.agent.communication.perception.IGyroPerceptor;
+import hso.autonomy.agent.communication.perception.IHingeJointPerceptor;
 import hso.autonomy.agent.communication.perception.ILinePerceptor;
 import hso.autonomy.agent.communication.perception.IPerception;
 import hso.autonomy.agent.communication.perception.IPerceptor;
@@ -34,9 +36,27 @@ public class Perception implements IPerception
 	// Map for all named perceptors
 	protected Map<String, IPerceptor> perceptors;
 
+	// Flag - if the current perception contains vision information
+	private boolean containsVision;
+
+	// Flag - if the current perception contains motor information
+	private boolean containsMotion;
+
 	public Perception()
 	{
 		perceptors = new HashMap<>();
+	}
+
+	@Override
+	public ICompositeJointPerceptor getCompositeJointPerceptor(String name)
+	{
+		return (ICompositeJointPerceptor) perceptors.get(name);
+	}
+
+	@Override
+	public IHingeJointPerceptor getHingeJointPerceptor(String name)
+	{
+		return (IHingeJointPerceptor) perceptors.get(name);
 	}
 
 	@Override
@@ -116,4 +136,47 @@ public class Perception implements IPerception
 				.map(perceptor -> (IReferencePointPerceptor) perceptor)
 				.collect(Collectors.toList());
 	}
+	
+	@Override
+	public boolean containsVision()
+	{
+		return containsVision;
+	}
+
+	@Override
+	public boolean containsMotion()
+	{
+		return containsMotion;
+	}
+
+	@Override
+	public void updatePerceptors(Map<String, IPerceptor> perceptors)
+	{
+		if (perceptors == null || perceptors.isEmpty()) {
+			// nothing to do, might happen at disconnection
+			return;
+		}
+
+		this.perceptors = perceptors;
+
+		// Clear list of visible objects
+		containsVision = false;
+		containsMotion = false;
+
+		// Process
+		perceptors.values().forEach(this ::processInputPerceptor);
+	}
+
+	private void processInputPerceptor(IPerceptor perceptor)
+	{
+		// Handle sensor perceptors
+		if (perceptor instanceof IHingeJointPerceptor || perceptor instanceof ICompositeJointPerceptor) {
+			containsMotion = true;
+		}
+
+		if (perceptor instanceof IVisibleObjectPerceptor) {
+			containsVision = true;
+		}
+	}
+
 }

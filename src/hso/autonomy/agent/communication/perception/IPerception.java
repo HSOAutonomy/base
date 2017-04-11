@@ -5,6 +5,7 @@
 package hso.autonomy.agent.communication.perception;
 
 import java.util.List;
+import java.util.Map;
 public interface IPerception {
 	/**
 	 * Get a specific Accelerometer Perceptor
@@ -77,4 +78,32 @@ public interface IPerception {
 	List<ILinePerceptor> getVisibleLines();
 
 	List<IReferencePointPerceptor> getReferencePointPerceptor();
+
+	/**
+	 * Get a specific Universal Joint Perceptor
+	 *
+	 * @param name Perceptor name
+	 * @return perceptor
+	 */
+	ICompositeJointPerceptor getCompositeJointPerceptor(String name);
+
+	/**
+	 * Get a specific Hinge Joint Perceptor
+	 *
+	 * @param name Perceptor name
+	 * @return perceptor
+	 */
+	IHingeJointPerceptor getHingeJointPerceptor(String name);
+
+	/**
+	 * @return true, if the current perception contains vision information
+	 */
+	boolean containsVision();
+
+	/**
+	 * @return true, if the current perception contains vision information
+	 */
+	boolean containsMotion();
+
+	void updatePerceptors(Map<String, IPerceptor> perceptor);
 }
