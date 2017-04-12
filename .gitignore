@@ -10,7 +10,11 @@
 hs_err_pid * 
 /bin/ 
 /build/
-.idea
 .clang-format 
 *.TMP 
 *.java-*
+
+# IntelliJ
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
