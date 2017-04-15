@@ -112,12 +112,6 @@ public class BodyModelTest
 		assertEquals(0, values[1], 0.0001);
 	}
 
-	/**
-	 * Test method for
-	 * {@link
-	 * hso.autonomy.agent.model.agentmodel.impl.BodyModel#updateFromPerception(magma.agent.perception.IRoboCupPerception)}
-	 * .
-	 */
 	@Test
 	public void testUpdateFromPerception()
 	{

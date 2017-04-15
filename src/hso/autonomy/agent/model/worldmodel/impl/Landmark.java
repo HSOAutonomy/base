@@ -17,7 +17,7 @@ import hso.autonomy.util.misc.FuzzyCompare;
  */
 public class Landmark extends VisibleObject implements ILandmark, IReferencePoint
 {
-	/** the position as defined in robocup configuration files */
+	/** the known position of the landmark (global coordinates) */
 	private final Vector3D knownPosition;
 
 	/**

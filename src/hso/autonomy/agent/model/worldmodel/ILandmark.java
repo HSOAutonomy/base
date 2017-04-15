@@ -12,8 +12,7 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
  */
 public interface ILandmark extends IVisibleObject {
 	/**
-	 * @return the known position of the landmark as defined in robocup
-	 *         configuration files
+	 * @return the known position of the landmark (global coordinates)
 	 */
 	Vector3D getKnownPosition();
 }

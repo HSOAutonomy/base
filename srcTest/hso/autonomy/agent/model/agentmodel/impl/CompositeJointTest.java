@@ -75,12 +75,6 @@ public class CompositeJointTest
 		testee = new CompositeJoint(jointConfig);
 	}
 
-	/**
-	 * Test method for
-	 * {@link
-	 * hso.autonomy.agent.model.agentmodel.impl.CompositeJoint#updateFromPerception(magma.agent.perception.IRoboCupPerception)}
-	 * .
-	 */
 	@Test
 	public void testUpdateFromPerception()
 	{

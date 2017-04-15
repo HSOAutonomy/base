@@ -35,9 +35,9 @@ public class LocalizerUtil
 	 * plane). After the calculation of the eigenvector it is ensured, that the
 	 * returned normal vector always points towards the center of the coordinate
 	 * system. (this means for example, if this method is used to compute the
-	 * normal of a soccer pitch by a bunch of points on ground level, the
+	 * normal of the ground by a bunch of points on ground level, the
 	 * resulting normal points always to the sky, since we can't be below the
-	 * soccer pitch)
+	 * ground)
 	 *
 	 * @param points the points forming a plane
 	 * @return a normal vector of the plane, always pointing towards the center
