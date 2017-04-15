@@ -5,8 +5,7 @@
 package hso.autonomy.agent.communication.action.impl;
 
 /**
- * Implementation of the SimSpark "HingeJoint" effector, used to move robot
- * joints
+ * Implementation of a "HingeJoint" effector, used to move robot joints
  *
  * @author Klaus Dorer
  */

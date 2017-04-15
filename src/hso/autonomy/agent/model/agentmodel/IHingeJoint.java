@@ -5,7 +5,7 @@
 package hso.autonomy.agent.model.agentmodel;
 
 /**
- * SimSpark "HingeJoint" sensor interface.
+ * "HingeJoint" sensor interface.
  *
  * @author Stefan Glaser, Klaus Dorer
  */

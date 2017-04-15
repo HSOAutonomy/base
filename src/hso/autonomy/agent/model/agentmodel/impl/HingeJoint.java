@@ -22,7 +22,7 @@ import hso.autonomy.util.misc.FuzzyCompare;
 import hso.autonomy.util.misc.ValueUtil;
 
 /**
- * SimSpark "HingeJoint" sensor implementation
+ * "HingeJoint" sensor implementation
  *
  * @author Stefan Glaser, Klaus Dorer
  *

@@ -12,7 +12,7 @@ import hso.autonomy.agent.model.agentmodel.IAccelerometer;
 import hso.autonomy.agent.model.agentmodel.ISensor;
 
 /**
- * Implementation of the SimSpark accelerometer sensor
+ * Implementation of an accelerometer sensor
  *
  * @author Ingo Schindler
  */

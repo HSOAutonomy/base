@@ -7,7 +7,7 @@ package hso.autonomy.agent.model.agentmodel;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 /**
- * SimSpark "ForceOrigin" sensor interface. Provides read-only access only.
+ * "Force" sensor interface. Provides read-only access only.
  *
  * @author Klaus Dorer
  */

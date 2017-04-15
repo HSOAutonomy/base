@@ -15,7 +15,7 @@ import hso.autonomy.agent.model.agentmodel.ISensor;
 import hso.autonomy.util.misc.FuzzyCompare;
 
 /**
- * SimSpark "GyroRate" sensor implementation.
+ * Implementation of a "GyroRate" sensor.
  *
  * @author Stefan Glaser, Srinivasa Ragavan
  */

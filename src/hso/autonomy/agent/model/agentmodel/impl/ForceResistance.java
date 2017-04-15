@@ -13,7 +13,7 @@ import hso.autonomy.agent.model.agentmodel.ISensor;
 import hso.autonomy.util.misc.FuzzyCompare;
 
 /**
- * Implementation of the SimSpark "ForceResistance" sensor
+ * Implementation of a "ForceResistance" sensor
  *
  * @author Klaus Dorer
  */

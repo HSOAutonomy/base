@@ -7,7 +7,7 @@ package hso.autonomy.util.connection.impl;
 import hso.autonomy.util.connection.ConnectionException;
 
 /**
- * Just implements a time trigger that can trigger perception e.g. to Naoqi. The
+ * Just implements a time trigger that can trigger perception. The
  * real communication is handled a layer above.
  * @author kdorer
  */

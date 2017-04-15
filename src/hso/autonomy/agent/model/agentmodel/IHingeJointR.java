@@ -7,7 +7,7 @@ package hso.autonomy.agent.model.agentmodel;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 /**
- * SimSpark "HingeJoint" sensor read only interface.
+ * "HingeJoint" sensor read only interface.
  *
  * @author Stefan Glaser, Klaus Dorer
  */
