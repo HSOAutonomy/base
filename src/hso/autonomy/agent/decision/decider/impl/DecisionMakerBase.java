@@ -97,7 +97,7 @@ public abstract class DecisionMakerBase implements IDecisionMaker, Serializable
 		if (isPaused()) {
 			desiredBehaviorName = getPausedBehavior();
 		} else {
-			desiredBehaviorName = decideSoccer();
+			desiredBehaviorName = decideNextBehavior();
 		}
 		desiredBehavior = behaviors.get(desiredBehaviorName);
 		if (desiredBehavior != currentBehavior) {
@@ -130,7 +130,7 @@ public abstract class DecisionMakerBase implements IDecisionMaker, Serializable
 	 *
 	 * @return Next behavior
 	 */
-	public abstract String decideSoccer();
+	public abstract String decideNextBehavior();
 
 	@Override
 	public IBehavior getCurrentBehavior()

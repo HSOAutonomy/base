@@ -8,8 +8,6 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
-import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
-
 import hso.autonomy.util.geometry.IPose3D;
 
 public interface IAgentMetaModel extends Serializable {
@@ -19,22 +17,6 @@ public interface IAgentMetaModel extends Serializable {
 	 * @return the name of this model
 	 */
 	String getName();
-
-	/**
-	 * Returns the corresponding action scene string, to this meta model.
-	 *
-	 * @return the scene-string
-	 */
-	String getSceneString();
-
-	/**
-	 * Returns the static pivot-point used as replacement of the CoM in the
-	 * balancing engine related movements. This pivot-point is usually close to
-	 * the initial CoM location or somewhere in the pelvis of the robot.
-	 *
-	 * @return the static pivot-point
-	 */
-	Vector3D getStaticPivotPoint();
 
 	/**
 	 * Returns a list of body part configurations, specifying the different body
@@ -98,22 +80,5 @@ public interface IAgentMetaModel extends Serializable {
 	 */
 	String[] getAvailableEffectorNames();
 
-	float getSoccerPositionKneeAngle();
-
-	float getSoccerPositionHipAngle();
-
 	float getHeight();
-
-	int getGoalPredictionTime();
-
-	float getCycleTime();
-
-	float getVisionCycleTime();
-
-	/**
-	 * @return the z coordinate of the torso center when the robot is upright
-	 */
-	float getTorsoZUpright();
-
-	boolean hasFootForceSensors();
 }

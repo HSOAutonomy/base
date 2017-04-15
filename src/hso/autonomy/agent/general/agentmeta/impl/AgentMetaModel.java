@@ -9,8 +9,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
-
 import hso.autonomy.agent.general.agentmeta.IAgentMetaModel;
 import hso.autonomy.agent.general.agentmeta.IBodyPartConfiguration;
 import hso.autonomy.agent.general.agentmeta.ICompositeJointConfiguration;
@@ -27,35 +25,19 @@ public abstract class AgentMetaModel implements IAgentMetaModel
 {
 	protected final String modelName;
 
-	protected final String sceneString;
-
 	protected List<IBodyPartConfiguration> bodyPartConfig;
 
 	protected final String bodyPartContainingCamera;
 
 	protected final IPose3D cameraOffset;
 
-	private final float soccerPositionKneeAngle;
-
-	private final float soccerPositionHipAngle;
-
 	private final float height;
-
-	private final int goalPredictionTime;
-
-	private final float cycleTime;
-
-	private final float visionCycleTime;
 
 	protected Collection<ISensorConfiguration> jointConfigs;
 
 	protected String[] jointNames;
 
 	protected String[] effectorNames;
-
-	protected final Vector3D staticPivotPoint;
-
-	private final float torsoZUpright;
 
 	/**
 	 * Constructor.
@@ -66,25 +48,13 @@ public abstract class AgentMetaModel implements IAgentMetaModel
 	 * @param bodyPartContainingCamera - the name of the body part containing the
 	 *        camera
 	 */
-	public AgentMetaModel(String modelName, String sceneString, Vector3D staticPivotPoint,
-			String bodyPartContainingCamera, IPose3D cameraOffset, float soccerPositionKneeAngle,
-			float soccerPositionHipAngle, float height, int goalPredictionTime, float cycleTime, float visionCycleTime,
-			float torsoZUpright)
+	public AgentMetaModel(String modelName, String bodyPartContainingCamera, IPose3D cameraOffset, float height)
 	{
 		this.modelName = modelName;
-		this.sceneString = sceneString;
-		this.staticPivotPoint = staticPivotPoint;
 		this.bodyPartContainingCamera = bodyPartContainingCamera;
 		this.cameraOffset = cameraOffset;
-		this.soccerPositionKneeAngle = soccerPositionKneeAngle;
-		this.soccerPositionHipAngle = soccerPositionHipAngle;
 		this.height = height;
-		this.goalPredictionTime = goalPredictionTime;
-		this.cycleTime = cycleTime;
-		this.visionCycleTime = visionCycleTime;
-		this.torsoZUpright = torsoZUpright;
-
-		setBodyPartConfiguration(createBodyPartConfigs());
+		bodyPartConfig = createBodyPartConfigs();
 	}
 
 	protected abstract List<IBodyPartConfiguration> createBodyPartConfigs();
@@ -96,26 +66,9 @@ public abstract class AgentMetaModel implements IAgentMetaModel
 	}
 
 	@Override
-	public String getSceneString()
-	{
-		return sceneString;
-	}
-
-	@Override
-	public Vector3D getStaticPivotPoint()
-	{
-		return staticPivotPoint;
-	}
-
-	@Override
 	public List<IBodyPartConfiguration> getBodyPartConfigurations()
 	{
 		return bodyPartConfig;
-	}
-
-	public void setBodyPartConfiguration(List<IBodyPartConfiguration> config)
-	{
-		bodyPartConfig = config;
 	}
 
 	@Override
@@ -214,50 +167,8 @@ public abstract class AgentMetaModel implements IAgentMetaModel
 	}
 
 	@Override
-	public float getSoccerPositionKneeAngle()
-	{
-		return soccerPositionKneeAngle;
-	}
-
-	@Override
-	public float getSoccerPositionHipAngle()
-	{
-		return soccerPositionHipAngle;
-	}
-
-	@Override
 	public float getHeight()
 	{
 		return height;
-	}
-
-	@Override
-	public int getGoalPredictionTime()
-	{
-		return goalPredictionTime;
-	}
-
-	@Override
-	public float getCycleTime()
-	{
-		return cycleTime;
-	}
-
-	@Override
-	public float getVisionCycleTime()
-	{
-		return visionCycleTime;
-	}
-
-	@Override
-	public float getTorsoZUpright()
-	{
-		return torsoZUpright;
-	}
-
-	@Override
-	public boolean hasFootForceSensors()
-	{
-		return false;
 	}
 }

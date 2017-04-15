@@ -43,14 +43,13 @@ public class BodyModelTest
 	@Before
 	public void setUp() throws Exception
 	{
-		AgentMetaModel metaModel2 =
-				new AgentMetaModel("name", "sceneString", null, null, new Pose3D(), 0, 0, 0, 0, 0, 0, 0) {
-					@Override
-					protected List<IBodyPartConfiguration> createBodyPartConfigs()
-					{
-						return getTestBodyPartConfig();
-					}
-				};
+		AgentMetaModel metaModel2 = new AgentMetaModel("name", null, new Pose3D(), 0) {
+			@Override
+			protected List<IBodyPartConfiguration> createBodyPartConfigs()
+			{
+				return getTestBodyPartConfig();
+			}
+		};
 		testee = new BodyModel(metaModel2, null);
 	}
 

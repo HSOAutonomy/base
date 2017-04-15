@@ -65,7 +65,7 @@ public class WorldModel implements IWorldModel, IEnvironmentModel, Serializable
 	protected float globalTime;
 
 	/** reference to the agent model needed for gyro localization */
-	protected IAgentModel agentModel;
+	private IAgentModel agentModel;
 
 	protected transient IPositionFilter posFilter;
 
@@ -264,5 +264,9 @@ public class WorldModel implements IWorldModel, IEnvironmentModel, Serializable
 		WorldModel other = (WorldModel) o;
 
 		return landmarks.equals(other.landmarks);
+	}
+	protected IAgentModel getAgentModel()
+	{
+		return agentModel;
 	}
 }
