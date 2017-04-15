@@ -2,13 +2,13 @@
  * For a list of authors see README.md
  * This software of HSOAutonomy is released under MIT License (see LICENSE).
  */
-package hso.autonomy.agent.decision.decider.impl;
+package hso.autonomy.agent.decision.decisionmaker.impl;
 
 import java.io.Serializable;
 
 import hso.autonomy.agent.decision.behavior.BehaviorMap;
 import hso.autonomy.agent.decision.behavior.IBehavior;
-import hso.autonomy.agent.decision.decider.IDecisionMaker;
+import hso.autonomy.agent.decision.decisionmaker.IDecisionMaker;
 import hso.autonomy.agent.model.agentmodel.IAgentModel;
 import hso.autonomy.agent.model.thoughtmodel.IThoughtModel;
 import hso.autonomy.agent.model.worldmodel.IWorldModel;

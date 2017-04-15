@@ -13,7 +13,7 @@ import hso.autonomy.agent.communication.channel.IChannelManager.ChannelManagerSt
 import hso.autonomy.agent.communication.perception.IPerception;
 import hso.autonomy.agent.communication.perception.IPerceptor;
 import hso.autonomy.agent.decision.behavior.BehaviorMap;
-import hso.autonomy.agent.decision.decider.IDecisionMaker;
+import hso.autonomy.agent.decision.decisionmaker.IDecisionMaker;
 import hso.autonomy.agent.general.agentmeta.IAgentMetaModel;
 import hso.autonomy.agent.model.agentmodel.IAgentModel;
 import hso.autonomy.agent.model.thoughtmodel.IThoughtModel;
