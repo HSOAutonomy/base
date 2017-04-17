@@ -2,7 +2,7 @@
  * For a list of authors see README.md
  * This software of HSOAutonomy is released under MIT License (see LICENSE).
  */
-package hso.autonomy.agent.general.agentmeta.impl;
+package hso.autonomy.agent.model.agentmeta.impl;
 
 import static org.junit.Assert.assertEquals;
 
