@@ -13,6 +13,8 @@ hs_err_pid *
 .clang-format 
 *.TMP 
 *.java-*
+*~
+*.vpp~*
 
 # IntelliJ
 .idea/**/workspace.xml
