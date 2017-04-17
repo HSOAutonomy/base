@@ -21,11 +21,11 @@ import hso.autonomy.agent.communication.perception.IHingeJointPerceptor;
 import hso.autonomy.agent.communication.perception.IPerception;
 import hso.autonomy.agent.communication.perception.impl.CompositeJointPerceptor;
 import hso.autonomy.agent.communication.perception.impl.HingeJointPerceptor;
-import hso.autonomy.agent.general.agentmeta.ICompositeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.IHingeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.IJointToMotorMapper;
-import hso.autonomy.agent.general.agentmeta.impl.CompositeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.impl.HingeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.ICompositeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.IHingeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.IJointToMotorMapper;
+import hso.autonomy.agent.model.agentmeta.impl.CompositeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.impl.HingeJointConfiguration;
 import hso.autonomy.agent.model.agentmodel.IHingeJoint;
 import hso.autonomy.agent.model.agentmodel.IJoint;
 

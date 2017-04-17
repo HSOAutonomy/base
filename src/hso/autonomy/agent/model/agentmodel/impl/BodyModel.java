@@ -17,8 +17,8 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 import hso.autonomy.agent.communication.action.IAction;
 import hso.autonomy.agent.communication.perception.IPerception;
-import hso.autonomy.agent.general.agentmeta.IAgentMetaModel;
-import hso.autonomy.agent.general.agentmeta.IBodyPartConfiguration;
+import hso.autonomy.agent.model.agentmeta.IAgentMetaModel;
+import hso.autonomy.agent.model.agentmeta.IBodyPartConfiguration;
 import hso.autonomy.agent.model.agentmodel.IBodyModel;
 import hso.autonomy.agent.model.agentmodel.IBodyPart;
 import hso.autonomy.agent.model.agentmodel.IHingeJoint;

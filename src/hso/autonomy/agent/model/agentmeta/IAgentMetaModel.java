@@ -2,7 +2,7 @@
  * For a list of authors see README.md
  * This software of HSOAutonomy is released under MIT License (see LICENSE).
  */
-package hso.autonomy.agent.general.agentmeta;
+package hso.autonomy.agent.model.agentmeta;
 
 import java.io.Serializable;
 import java.util.Collection;

@@ -17,10 +17,10 @@ import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 import hso.autonomy.agent.communication.perception.IPerception;
-import hso.autonomy.agent.general.agentmeta.IBodyPartConfiguration;
-import hso.autonomy.agent.general.agentmeta.ICompositeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.IHingeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.ISensorConfiguration;
+import hso.autonomy.agent.model.agentmeta.IBodyPartConfiguration;
+import hso.autonomy.agent.model.agentmeta.ICompositeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.IHingeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.ISensorConfiguration;
 import hso.autonomy.agent.model.agentmodel.IBodyPart;
 import hso.autonomy.agent.model.agentmodel.IHingeJoint;
 import hso.autonomy.agent.model.agentmodel.IJoint;

@@ -5,7 +5,7 @@
 package hso.autonomy.agent.model.agentmodel.impl;
 
 import hso.autonomy.agent.communication.perception.IPerception;
-import hso.autonomy.agent.general.agentmeta.IAgentMetaModel;
+import hso.autonomy.agent.model.agentmeta.IAgentMetaModel;
 import hso.autonomy.agent.model.agentmodel.impl.ik.IAgentIKSolver;
 
 /**

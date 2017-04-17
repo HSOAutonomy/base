@@ -13,7 +13,7 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 import hso.autonomy.agent.communication.perception.IHingeJointPerceptor;
 import hso.autonomy.agent.communication.perception.IPerception;
-import hso.autonomy.agent.general.agentmeta.IHingeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.IHingeJointConfiguration;
 import hso.autonomy.agent.model.agentmodel.IHingeJoint;
 import hso.autonomy.agent.model.agentmodel.IJoint;
 import hso.autonomy.agent.model.agentmodel.IMotor;

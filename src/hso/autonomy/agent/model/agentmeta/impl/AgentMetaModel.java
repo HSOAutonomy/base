@@ -2,18 +2,18 @@
  * For a list of authors see README.md
  * This software of HSOAutonomy is released under MIT License (see LICENSE).
  */
-package hso.autonomy.agent.general.agentmeta.impl;
+package hso.autonomy.agent.model.agentmeta.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import hso.autonomy.agent.general.agentmeta.IAgentMetaModel;
-import hso.autonomy.agent.general.agentmeta.IBodyPartConfiguration;
-import hso.autonomy.agent.general.agentmeta.ICompositeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.IHingeJointConfiguration;
-import hso.autonomy.agent.general.agentmeta.ISensorConfiguration;
+import hso.autonomy.agent.model.agentmeta.IAgentMetaModel;
+import hso.autonomy.agent.model.agentmeta.IBodyPartConfiguration;
+import hso.autonomy.agent.model.agentmeta.ICompositeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.IHingeJointConfiguration;
+import hso.autonomy.agent.model.agentmeta.ISensorConfiguration;
 import hso.autonomy.util.geometry.IPose3D;
 
 /**

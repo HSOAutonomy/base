@@ -9,6 +9,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import hso.autonomy.agent.model.agentmeta.impl.OffsetJointMapper;
+
 /**
  *
  * @author kdorer
@@ -28,7 +30,7 @@ public class OffsetJointMapperTest
 
 	/**
 	 * Test method for
-	 * {@link hso.autonomy.agent.general.agentmeta.impl.OffsetJointMapper#jointToMotorAngle(double[])}
+	 * {@link hso.autonomy.agent.model.agentmeta.impl.OffsetJointMapper#jointToMotorAngle(double[])}
 	 * .
 	 */
 	@Test
@@ -41,7 +43,7 @@ public class OffsetJointMapperTest
 
 	/**
 	 * Test method for
-	 * {@link hso.autonomy.agent.general.agentmeta.impl.OffsetJointMapper#motorToJointAngle(double[])}
+	 * {@link hso.autonomy.agent.model.agentmeta.impl.OffsetJointMapper#motorToJointAngle(double[])}
 	 * .
 	 */
 	@Test
