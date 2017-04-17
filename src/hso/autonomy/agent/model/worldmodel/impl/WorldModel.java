@@ -80,9 +80,6 @@ public class WorldModel implements IWorldModel, IEnvironmentModel, Serializable
 	 *
 	 * @param agentModel Reference to the agent model object
 	 * @param localizer the module that calculates the agent's global position
-	 * @param metaModel the meta model of the rc server
-	 * @param teamname Team name
-	 * @param playerNumber Player number
 	 */
 	public WorldModel(IAgentModel agentModel, ILocalizer localizer)
 	{

@@ -88,7 +88,7 @@ public class FunctionUtil
 	 * relatively expensive, since it's iteratively computing the linear
 	 * interpolations of the running pointset.
 	 *
-	 * @param points - the list of support points
+	 * @param currentPoints - the list of support points
 	 * @param t - the interpolation parameter (0..1)
 	 *
 	 * @return point on Bezier curve

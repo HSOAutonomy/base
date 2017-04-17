@@ -136,7 +136,7 @@ public class Perception implements IPerception
 				.map(perceptor -> (IReferencePointPerceptor) perceptor)
 				.collect(Collectors.toList());
 	}
-	
+
 	@Override
 	public boolean containsVision()
 	{
@@ -178,5 +178,4 @@ public class Perception implements IPerception
 			containsVision = true;
 		}
 	}
-
 }

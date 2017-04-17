@@ -21,7 +21,6 @@ public interface IChannelManager extends IActionPerformer {
 		STOPPED,
 		LOST_MAIN_CONNECTION
 	}
-	;
 
 	void addPerceptors(Map<String, IPerceptor> newPerceptors);
 

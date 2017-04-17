@@ -43,8 +43,6 @@ public abstract class AgentMetaModel implements IAgentMetaModel
 	 * Constructor.
 	 *
 	 * @param modelName - the name of this model
-	 * @param sceneString - the scene string
-	 * @param staticPivotPoint - the static pivot-point related to this robot
 	 * @param bodyPartContainingCamera - the name of the body part containing the
 	 *        camera
 	 */

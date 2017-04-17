@@ -40,8 +40,8 @@ public class ByteUtil
 	 * Converts the four bytes into a int
 	 * @param hhByte the high-high byte
 	 * @param hlByte the high-low byte
-	 * @param hlByte the low-high byte
-	 * @param hlByte the low-low byte
+	 * @param lhByte the low-high byte
+	 * @param llByte the low-low byte
 	 * @return a int resembled from the four bytes passed
 	 */
 	public static int getIntFromBytes(byte hhByte, byte hlByte, byte lhByte, byte llByte)

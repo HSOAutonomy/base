@@ -53,9 +53,6 @@ public class Motor implements Serializable, IMotor
 	 * Instantiates a new Motor
 	 *
 	 * @param name Effector name
-	 * @param effector the effector this joint is linked to
-	 * @param min Minimum sensor value
-	 * @param max Maximum sensor value
 	 */
 	Motor(String name, float maxSpeed, float maxGain)
 	{

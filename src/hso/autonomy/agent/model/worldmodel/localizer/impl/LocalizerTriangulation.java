@@ -28,11 +28,6 @@ public class LocalizerTriangulation extends LocalizerBase
 	/**
 	 * Calculates absolute position and directions by performing triangulation
 	 * for all pairs of flags taking the average of all calculations.
-	 * @param flags visible landmarks with known position to be used for
-	 *        localization
-	 * @param neckYawAngle the horizontal neck angle (yaw) of the viewer
-	 * @param neckPitchAngle the vertical neck angle (pitch) of the viewer (not
-	 *        used at the moment)
 	 * @return an array of two Vector3Ds, the first containing the absolute x,y,z
 	 *         position of the viewer on the field, the second containing no real
 	 *         vector, but the horizontal, latitudal and rotational absolute body

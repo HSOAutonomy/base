@@ -60,7 +60,7 @@ public class SinFunction extends SupportPointFunction
 	 * @param period - the period
 	 * @param amplitude - the amplitude
 	 * @param phaseShift - the phase shift
-	 * @param yOffset - the offset in Y-direction
+	 * @param offset - the offset in Y-direction
 	 */
 	public SinFunction(float period, float amplitude, float phaseShift, float offset, float stiffness)
 	{
