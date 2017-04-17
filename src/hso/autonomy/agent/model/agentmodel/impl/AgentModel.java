@@ -339,8 +339,7 @@ public class AgentModel implements IAgentModel, Serializable
 		}
 	}
 
-	@Override
-	public IAgentMetaModel getMetaModel()
+	protected IAgentMetaModel getMetaModel()
 	{
 		return metaModel;
 	}

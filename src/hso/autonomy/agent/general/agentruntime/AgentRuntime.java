@@ -176,11 +176,6 @@ public abstract class AgentRuntime implements IObserver<Map<String, IPerceptor>>
 		channelManager.stop();
 	}
 
-	public IAgentMetaModel getAgentMetaModel()
-	{
-		return agentMetaModel;
-	}
-
 	public IPerception getPerception()
 	{
 		return perception;

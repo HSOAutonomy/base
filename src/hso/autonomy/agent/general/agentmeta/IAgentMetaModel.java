@@ -7,7 +7,9 @@ package hso.autonomy.agent.general.agentmeta;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
+import hso.autonomy.agent.communication.action.IEffector;
 import hso.autonomy.util.geometry.IPose3D;
 
 public interface IAgentMetaModel extends Serializable {
@@ -17,6 +19,12 @@ public interface IAgentMetaModel extends Serializable {
 	 * @return the name of this model
 	 */
 	String getName();
+
+	/**
+	 * Creates all Effectors based on this meta-model
+	 * @return a map with all effectors
+	 */
+	Map<String, IEffector> createEffectors();
 
 	/**
 	 * Returns a list of body part configurations, specifying the different body

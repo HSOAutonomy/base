@@ -19,6 +19,7 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 import org.junit.Before;
 import org.junit.Test;
 
+import hso.autonomy.agent.communication.action.IEffector;
 import hso.autonomy.agent.communication.perception.IAccelerometerPerceptor;
 import hso.autonomy.agent.communication.perception.IGyroPerceptor;
 import hso.autonomy.agent.communication.perception.IHingeJointPerceptor;
@@ -48,6 +49,12 @@ public class BodyModelTest
 			protected List<IBodyPartConfiguration> createBodyPartConfigs()
 			{
 				return getTestBodyPartConfig();
+			}
+
+			@Override
+			public Map<String, IEffector> createEffectors()
+			{
+				return new HashMap<String, IEffector>();
 			}
 		};
 		testee = new BodyModel(metaModel2, null);

@@ -17,7 +17,7 @@ import hso.autonomy.agent.communication.action.IEffector;
  */
 public class Action implements IAction
 {
-	protected final HashMap<String, IEffector> effectors;
+	protected Map<String, IEffector> effectors;
 
 	protected Map<String, IEffector> actionEffectors;
 
