@@ -1,4 +1,7 @@
 # base
+
+[![Build Status](https://travis-ci.org/HSOAutonomy/base.png)](https://travis-ci.org/HSOAutonomy/base)
+
 Base classes for all HSOAutonomy projects.
 
 ## Formatting
