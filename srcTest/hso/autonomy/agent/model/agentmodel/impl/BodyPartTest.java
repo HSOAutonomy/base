@@ -172,7 +172,7 @@ public class BodyPartTest
 		IJoint joint = mock(IJoint.class);
 		when(joint.getRotation()).thenReturn(rotation);
 		when(joint.getName()).thenReturn(name);
-		joint.updateSensors((Map<String, ISensor>) Mockito.anyObject(), (Map<String, ISensor>) Mockito.anyObject());
+		joint.updateSensors(Mockito.anyObject(), Mockito.anyObject());
 		return joint;
 	}
 
@@ -200,7 +200,7 @@ public class BodyPartTest
 		joint2 = mock(IJoint.class);
 		when(joint2.getRotation()).thenReturn(Rotation.IDENTITY);
 		when(joint2.getName()).thenReturn("joint2Name");
-		joint2.updateSensors((Map<String, ISensor>) Mockito.anyObject(), (Map<String, ISensor>) Mockito.anyObject());
+		joint2.updateSensors(Mockito.anyObject(), Mockito.anyObject());
 
 		torso = new BodyPart("torso", null, null, Vector3D.ZERO, Vector3D.ZERO, 2.0f, null);
 	}
