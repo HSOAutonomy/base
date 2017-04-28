@@ -58,7 +58,7 @@ public abstract class MovableObject extends VisibleObject implements IMoveableOb
 
 	protected Vector3D[] calculateFuturePositions(int howMany)
 	{
-		return Geometry.getFuturePositions(position, speed, howMany);
+		return Geometry.getFuturePositions(position, getSpeed(), howMany);
 	}
 
 	/**
@@ -147,7 +147,7 @@ public abstract class MovableObject extends VisibleObject implements IMoveableOb
 	@Override
 	public boolean isMoving()
 	{
-		return getSpeed().getNorm() > 0.017;
+		return speed.getNorm() > 0.017;
 	}
 
 	@Override
