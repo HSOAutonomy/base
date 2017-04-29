@@ -21,3 +21,4 @@ hs_err_pid *
 .idea/**/tasks.xml
 .idea/**/watcherTasks.xml
 .idea/dictionaries
+\.DS_Store
