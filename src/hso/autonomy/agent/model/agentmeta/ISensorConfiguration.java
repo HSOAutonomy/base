@@ -7,22 +7,10 @@ package hso.autonomy.agent.model.agentmeta;
 import java.io.Serializable;
 
 /**
- * Sensor configuration interface
- *
  * @author Stefan Glaser
  */
 public interface ISensorConfiguration extends Serializable {
-	/**
-	 * Get the sensors name
-	 *
-	 * @return The sensor name
-	 */
 	String getName();
 
-	/**
-	 * Get the perceptor name
-	 *
-	 * @return Perceptor name
-	 */
 	String getPerceptorName();
 }

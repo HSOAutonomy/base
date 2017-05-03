@@ -7,8 +7,6 @@ package hso.autonomy.agent.model.agentmeta.impl;
 import hso.autonomy.agent.model.agentmeta.ISensorConfiguration;
 
 /**
- * Sensor configuration
- *
  * @author Stefan Glaser
  */
 public class SensorConfiguration implements ISensorConfiguration
@@ -17,12 +15,6 @@ public class SensorConfiguration implements ISensorConfiguration
 
 	private final String perceptorName;
 
-	/**
-	 * Constructor
-	 *
-	 * @param name Sensor name
-	 * @param perceptorName Perceptor name
-	 */
 	public SensorConfiguration(String name, String perceptorName)
 	{
 		this.name = name;
