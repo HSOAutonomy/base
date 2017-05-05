@@ -4,16 +4,13 @@
  */
 package hso.autonomy.util.geometry;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
+import hso.autonomy.util.misc.FuzzyCompare;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 import org.junit.Before;
 import org.junit.Test;
 
-import hso.autonomy.util.geometry.Circle3D;
-import hso.autonomy.util.geometry.Sphere;
-import hso.autonomy.util.misc.FuzzyCompare;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *

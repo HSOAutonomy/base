@@ -6,6 +6,7 @@ package hso.autonomy.util.geometry;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.function.ToDoubleFunction;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
@@ -36,9 +37,10 @@ public class VectorUtils
 		return new Vector3D(x, y, z);
 	}
 
-	private static <T> double average(Vector3D[] vectors, ToDoubleFunction<? super Vector3D> mapper)
+	private static double average(Vector3D[] vectors, ToDoubleFunction<? super Vector3D> mapper)
 	{
-		return Arrays.stream(vectors).mapToDouble(mapper).average().getAsDouble();
+		OptionalDouble average = Arrays.stream(vectors).mapToDouble(mapper).average();
+		return average.isPresent() ? average.getAsDouble() : 0;
 	}
 
 	public static Vector3D flipXY(Vector3D v)
