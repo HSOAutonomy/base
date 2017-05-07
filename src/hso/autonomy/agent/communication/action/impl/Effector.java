@@ -15,22 +15,12 @@ public abstract class Effector implements IEffector
 {
 	private final String name;
 
-	/**
-	 * Constructor
-	 *
-	 * @param name Effector name
-	 */
 	public Effector(String name)
 	{
 		super();
 		this.name = name;
 	}
 
-	/**
-	 * Retrieve effector name
-	 *
-	 * @return Effector name
-	 */
 	@Override
 	public String getName()
 	{
