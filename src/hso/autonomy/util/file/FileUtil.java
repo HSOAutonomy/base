@@ -88,6 +88,16 @@ public class FileUtil
 		throw new UnsupportedOperationException("Cannot list files for URL " + pathURL);
 	}
 
+	public static String readFile(String file)
+	{
+		try {
+			return new String(Files.readAllBytes(Paths.get(file)));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
 	public static void writeFile(String file, String content, OpenOption... option)
 	{
 		try {
