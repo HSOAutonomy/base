@@ -75,6 +75,48 @@ public class FuzzyCompare
 	}
 
 	/**
+	 * Checks if the passed value is close to zero
+	 * @param reference the value to check
+	 * @param range the epsilon the value may be off zero
+	 * @return true if the value is closer to zero than range (including)
+	 */
+	public static boolean isZero(double reference, double range)
+	{
+		return eq(reference, 0.0, range);
+	}
+
+	/**
+	 * Checks if the passed value is close to zero
+	 * @param reference the value to check
+	 * @return true if the value is closer to zero than 0.00001 (including)
+	 */
+	public static boolean isZero(double reference)
+	{
+		return eq(reference, 0.0, 0.00001);
+	}
+
+	/**
+	 * Checks if the passed value is close to zero
+	 * @param reference the value to check
+	 * @param range the epsilon the value may be off zero
+	 * @return true if the value is closer to zero than range (including)
+	 */
+	public static boolean isZero(float reference, float range)
+	{
+		return eq(reference, 0.0f, range);
+	}
+
+	/**
+	 * Checks if the passed value is close to zero
+	 * @param reference the value to check
+	 * @return true if the value is closer to zero than 0.00001 (including)
+	 */
+	public static boolean isZero(float reference)
+	{
+		return eq(reference, 0.0f, 0.00001f);
+	}
+
+	/**
 	 * Fuzzy "Greater Than or Equal" ( >= ) comparison
 	 *
 	 * @param reference Reference value
