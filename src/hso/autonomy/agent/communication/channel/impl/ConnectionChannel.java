@@ -33,19 +33,6 @@ public abstract class ConnectionChannel extends ChannelBase implements IInputCha
 		numberOfReceivedMessages = 0;
 	}
 
-	protected void sendMessage(byte[] message)
-	{
-		try {
-			connection.sendMessage(message);
-			// System.out.println("sending: " + Arrays.toString(message));
-			// System.out.println("sending: " + new String(message));
-
-		} catch (ConnectionException e) {
-			System.err.println("ConnectionChannel::sendMessage(): " + e);
-			state.setLastErrorMessage(e.getMessage());
-		}
-	}
-
 	/**
 	 * Starts the connection to the server, will only return after disconnection
 	 * Uses default IP and port

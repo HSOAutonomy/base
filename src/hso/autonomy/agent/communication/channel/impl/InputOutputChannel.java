@@ -11,8 +11,6 @@ import hso.autonomy.agent.communication.action.IMessageEncoder;
 import hso.autonomy.agent.communication.channel.IChannelManager;
 import hso.autonomy.agent.communication.channel.IOutputChannel;
 import hso.autonomy.agent.communication.perception.IMessageParser;
-import hso.autonomy.agent.communication.perception.IPerceptor;
-import hso.autonomy.agent.communication.perception.PerceptorConversionException;
 import hso.autonomy.util.connection.ConnectionException;
 import hso.autonomy.util.connection.IServerConnection;
 
@@ -20,20 +18,29 @@ import hso.autonomy.util.connection.IServerConnection;
  *
  * @author kdorer
  */
-public abstract class InputOutputChannel extends ConnectionChannel implements IOutputChannel
+public abstract class InputOutputChannel extends InputChannel implements IOutputChannel
 {
-	/** message decoder */
-	private final IMessageParser parser;
-
 	/** message encoder */
 	private final IMessageEncoder encoder;
 
 	public InputOutputChannel(
 			IChannelManager manager, IServerConnection connection, IMessageParser parser, IMessageEncoder encoder)
 	{
-		super(manager, connection);
-		this.parser = parser;
+		super(manager, connection, parser);
 		this.encoder = encoder;
+	}
+
+	protected void sendMessage(byte[] message)
+	{
+		try {
+			connection.sendMessage(message);
+			// System.out.println("sending: " + Arrays.toString(message));
+			// System.out.println("sending: " + new String(message));
+
+		} catch (ConnectionException e) {
+			System.err.println("ConnectionChannel::sendMessage(): " + e);
+			state.setLastErrorMessage(e.getMessage());
+		}
 	}
 
 	@Override
@@ -41,35 +48,5 @@ public abstract class InputOutputChannel extends ConnectionChannel implements IO
 	{
 		byte[] message = encoder.encodeMessage(effectors);
 		sendMessage(message);
-	}
-
-	/**
-	 * Notification for each message was received on this channel
-	 */
-	@Override
-	protected void onEachMessage(byte[] message) throws ConnectionException
-	{
-		try {
-			Map<String, IPerceptor> rawPerceptors = parser.parseMessage(message);
-			publishPerceptors(rawPerceptors);
-		} catch (PerceptorConversionException | RuntimeException e) {
-			// TODO: we should be able to recognize. At least we should explicitly
-			// specify which exceptions we ignore on purpose
-			onInvalidData(parser.getErrorString(message));
-		}
-	}
-
-	protected void publishPerceptors(Map<String, IPerceptor> rawPerceptors)
-	{
-		getManager().addPerceptors(rawPerceptors);
-	}
-
-	/**
-	 * Notification when the first message was received on this channel, before
-	 * processing it
-	 */
-	@Override
-	protected void onFirstMessage(byte[] message) throws ConnectionException
-	{
 	}
 }
