@@ -91,14 +91,20 @@ public class AgentModel implements IAgentModel, Serializable
 	@Override
 	public boolean update(IPerception perception)
 	{
+		boolean result = updateWithFuture(perception);
+
+		// now inform observers about changes
+		observer.onStateChange(this);
+		return result;
+	}
+
+	protected boolean updateWithFuture(IPerception perception)
+	{
 		// update all Sensors
 		bodyModelSensed.updateFromPerception(perception);
 		bodyModelExpected = bodyModelFuture;
 		bodyModelExpected.updateFromPerception(perception);
 		bodyModelFuture = createBodyModel(bodyModelExpected);
-
-		// now inform observers about changes
-		observer.onStateChange(this);
 		return perception.containsMotion();
 	}
 

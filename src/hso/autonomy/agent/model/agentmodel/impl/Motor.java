@@ -131,6 +131,11 @@ public class Motor implements Serializable, IMotor
 		error = hingeJointPerceptor.getError();
 	}
 
+	void updateNoPerception(float angle)
+	{
+		perceivedAngle = angle;
+	}
+
 	@Override
 	public float getMaxSpeed()
 	{

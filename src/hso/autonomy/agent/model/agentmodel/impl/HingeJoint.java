@@ -316,6 +316,7 @@ public class HingeJoint extends Joint implements IHingeJoint
 	{
 		// in the case where we are connected to the perception this is done in
 		// the copy constructor
+		motor.updateNoPerception(angle);
 		originalAngle = angle;
 		super.updateNoPerception();
 	}
