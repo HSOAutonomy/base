@@ -47,6 +47,8 @@ public abstract class InputOutputChannel extends InputChannel implements IOutput
 	public void sendMessage(Map<String, IEffector> effectors)
 	{
 		byte[] message = encoder.encodeMessage(effectors);
-		sendMessage(message);
+		if (message != null) {
+			sendMessage(message);
+		}
 	}
 }
