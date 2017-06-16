@@ -190,7 +190,7 @@ public class Angle implements Serializable
 	@Override
 	public String toString()
 	{
-		return String.format(Locale.US, "%.2f°", degrees());
+		return String.format(Locale.US, "%.2fdeg", degrees());
 	}
 
 	/**
