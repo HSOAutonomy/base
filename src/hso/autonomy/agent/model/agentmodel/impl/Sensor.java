@@ -28,7 +28,7 @@ public abstract class Sensor implements Serializable, ISensor
 	 *
 	 * @param name Sensor name
 	 */
-	Sensor(String name, String perceptorName)
+	public Sensor(String name, String perceptorName)
 	{
 		this.name = name;
 		this.perceptorName = perceptorName;
