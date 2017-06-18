@@ -21,6 +21,8 @@ public class ReferencePoint implements IReferencePoint
 
 	private final Vector3D knownPosition;
 
+	private String name;
+
 	public ReferencePoint(Vector3D localPosition, Vector3D knownPosition)
 	{
 		this.localPosition = localPosition;
@@ -50,4 +52,15 @@ public class ReferencePoint implements IReferencePoint
 	{
 		return 0;
 	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	@Override
+	public String getName()
+	{
+		return name;
+	};
 }

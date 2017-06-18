@@ -29,4 +29,6 @@ public interface IReferencePoint extends Comparable<IReferencePoint> {
 	 *         is up to date)
 	 */
 	boolean isVisible();
+
+	String getName();
 }
