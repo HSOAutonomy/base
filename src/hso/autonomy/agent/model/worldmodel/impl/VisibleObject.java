@@ -257,4 +257,10 @@ public abstract class VisibleObject implements IVisibleObject, Serializable
 		position = newPosition;
 		visible = false;
 	}
+
+	@Override
+	public String toString()
+	{
+		return "VisibleObject [name=" + name + ", position=" + position + ", visible=" + visible + "]";
+	}
 }

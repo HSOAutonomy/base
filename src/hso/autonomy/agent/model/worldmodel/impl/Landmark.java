@@ -89,4 +89,10 @@ public class Landmark extends VisibleObject implements ILandmark, IReferencePoin
 		}
 		return FuzzyCompare.eq(knownPosition, other.knownPosition, 0.00001f);
 	}
+
+	@Override
+	public String toString()
+	{
+		return "Landmark [knownPosition=" + knownPosition + " " + super.toString() + "]";
+	}
 }
