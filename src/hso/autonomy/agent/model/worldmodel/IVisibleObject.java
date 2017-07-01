@@ -42,11 +42,18 @@ public interface IVisibleObject {
 	Vector3D getLocalPosition();
 
 	/**
+	 * Retrieves the position of the visible object as seen by camera.
+	 *
+	 * @return the position of the visible object in the camera coordinate system
+	 */
+	Vector3D getSeenPosition();
+
+	/**
 	 * @return time stamp when this object was last updated by perception
 	 */
 	float getLastSeenTime();
 
-	void updateFromVision(Vector3D localPosition, Vector3D globalPosition, float time);
+	void updateFromVision(Vector3D seenPosition, Vector3D localPosition, Vector3D globalPosition, float time);
 
 	void updateFromAudio(Vector3D localPosition, Vector3D globalPosition, float time);
 

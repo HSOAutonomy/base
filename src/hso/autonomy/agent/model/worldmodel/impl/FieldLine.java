@@ -63,7 +63,7 @@ public class FieldLine extends VisibleObject implements IFieldLine, IReferenceLi
 			newPos = pos2;
 		}
 
-		super.updateFromVision(localPosition, newPos, time);
+		super.updateFromVision(seenPosition, localPosition, newPos, time);
 	}
 
 	/**

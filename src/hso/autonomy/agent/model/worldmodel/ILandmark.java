@@ -6,11 +6,13 @@ package hso.autonomy.agent.model.worldmodel;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
+import hso.autonomy.agent.model.worldmodel.localizer.IReferencePoint;
+
 /**
  * Base interface for all Landmarks on the filed (goal posts, flags)
  * @author Klaus Dorer
  */
-public interface ILandmark extends IVisibleObject {
+public interface ILandmark extends IVisibleObject, IReferencePoint {
 	/**
 	 * @return the known position of the landmark (global coordinates)
 	 */

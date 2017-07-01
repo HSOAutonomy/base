@@ -21,6 +21,9 @@ public abstract class VisibleObject implements IVisibleObject, Serializable
 {
 	private final String name;
 
+	/** the last perceived seen position in the camera coordinate system */
+	protected Vector3D seenPosition;
+
 	/** the last perceived local position in the root body system */
 	protected Vector3D localPosition;
 
@@ -47,6 +50,7 @@ public abstract class VisibleObject implements IVisibleObject, Serializable
 	public VisibleObject(String name)
 	{
 		this.name = name;
+		seenPosition = Vector3D.ZERO;
 		localPosition = Vector3D.ZERO;
 		position = Vector3D.ZERO;
 		previousPosition = Vector3D.ZERO;
@@ -59,6 +63,12 @@ public abstract class VisibleObject implements IVisibleObject, Serializable
 	public String getName()
 	{
 		return name;
+	}
+
+	@Override
+	public Vector3D getSeenPosition()
+	{
+		return seenPosition;
 	}
 
 	@Override
@@ -100,8 +110,9 @@ public abstract class VisibleObject implements IVisibleObject, Serializable
 	 *        object
 	 * @param time - time the current absolute time
 	 */
-	public void updateFromVision(Vector3D localPosition, Vector3D globalPosition, float time)
+	public void updateFromVision(Vector3D seenPosition, Vector3D localPosition, Vector3D globalPosition, float time)
 	{
+		this.seenPosition = seenPosition;
 		this.localPosition = localPosition;
 		setPosition(globalPosition);
 
@@ -116,6 +127,7 @@ public abstract class VisibleObject implements IVisibleObject, Serializable
 	 */
 	public void updateFromAudio(Vector3D localPosition, Vector3D globalPosition, float time)
 	{
+		this.seenPosition = Vector3D.ZERO;
 		this.localPosition = localPosition;
 		setPosition(globalPosition);
 		lastSeenTime = time;

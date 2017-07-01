@@ -80,13 +80,13 @@ public abstract class MovableObject extends VisibleObject implements IMoveableOb
 	}
 
 	@Override
-	public void updateFromVision(Vector3D localPosition, Vector3D globalPosition, float time)
+	public void updateFromVision(Vector3D seenPosition, Vector3D localPosition, Vector3D globalPosition, float time)
 	{
 		// WARNING: getLastSeenTime() MUST be called before super.update(),
 		// because
 		// super.update() updates the lastSeenTime with the current time
 		float lastSeenTime = getLastSeenTime();
-		super.updateFromVision(localPosition, globalPosition, time);
+		super.updateFromVision(seenPosition, localPosition, globalPosition, time);
 		calculateSpeed(lastSeenTime, time);
 
 		futurePositions = null;

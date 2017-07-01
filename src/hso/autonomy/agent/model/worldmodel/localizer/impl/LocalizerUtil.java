@@ -206,7 +206,7 @@ public class LocalizerUtil
 	 *        calculation
 	 * @return the position
 	 */
-	public static Vector3D calculatePositionByGlobalPoints(Collection<IReferencePoint> refPoints)
+	public static Vector3D calculatePositionByGlobalPoints(Collection<? extends IReferencePoint> refPoints)
 	{
 		// localized x-, y-, z-Position
 		double x = 0;
