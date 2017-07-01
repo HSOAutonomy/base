@@ -10,8 +10,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import hso.autonomy.util.geometry.Angle;
-
 /**
  * @author Klaus Dorer
  *
@@ -224,7 +222,7 @@ public class AngleTest
 	@Test
 	public void testToString()
 	{
-		assertEquals("1.12°", Angle.deg(1.1234).toString());
+		assertEquals("1.12deg", Angle.deg(1.1234).toString());
 	}
 
 	@Test
