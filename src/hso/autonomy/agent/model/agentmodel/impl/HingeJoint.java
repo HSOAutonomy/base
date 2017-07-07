@@ -300,9 +300,14 @@ public class HingeJoint extends Joint implements IHingeJoint
 
 	void updateFromPerception(IHingeJointPerceptor hingeJointPerceptor)
 	{
+		float newAxis = hingeJointPerceptor.getAxis();
+		if (Double.isNaN(newAxis)) {
+			System.err.println("Received Nan value for joint: " + getName() + " skipping it...");
+			return;
+		}
 		motor.updateFromPerception(hingeJointPerceptor);
 
-		float axis = negateRotation * hingeJointPerceptor.getAxis();
+		float axis = negateRotation * newAxis;
 		float delta = angle - originalAngle;
 		originalAngle = axis;
 		angle = originalAngle + delta;
