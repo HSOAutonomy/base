@@ -29,6 +29,7 @@ public class VisibleObjectPerceptor extends Perceptor implements IVisibleObjectP
 		super(name);
 		this.position = position;
 		this.hasDepth = hasDepth;
+		this.confidence = confidence;
 	}
 
 	@Override
