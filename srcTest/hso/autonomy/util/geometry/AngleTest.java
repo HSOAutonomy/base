@@ -222,7 +222,7 @@ public class AngleTest
 	@Test
 	public void testToString()
 	{
-		assertEquals("1.12deg", Angle.deg(1.1234).toString());
+		assertEquals("1.12\u00b0", Angle.deg(1.1234).toString());
 	}
 
 	@Test

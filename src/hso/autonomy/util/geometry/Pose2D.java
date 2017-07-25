@@ -205,7 +205,7 @@ public class Pose2D implements IPose2D
 	@Override
 	public String toString()
 	{
-		return String.format(Locale.US, "(%.2f, %.2f; %.2fdeg)", x, y, angle.degrees());
+		return String.format(Locale.US, "(%.2f, %.2f; %s)", x, y, angle);
 	}
 
 	@Override
