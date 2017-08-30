@@ -210,20 +210,20 @@ public class TCPIPTestServer
 	 */
 	public static void main(String[] args) throws InterruptedException
 	{
-		IntegerArgument PORT =
+		IntegerArgument portArgument =
 				new IntegerArgument("port", 5790, 0, "the port on which the server is listening for incoming");
-		IntegerArgument SLEEP_TIME = new IntegerArgument(
+		IntegerArgument sleepTimeArgument = new IntegerArgument(
 				"time", 10, -1, "the number of milliseconds to wait between two messages, if no wait");
-		IntegerArgument MESSAGES =
+		IntegerArgument messagesArgument =
 				new IntegerArgument("messages", 6000, -1, "the number of messages to send, -1 if infinite");
-		BooleanArgument QUIET = new BooleanArgument("quiet", "if the server should not print messages");
+		BooleanArgument quietArgument = new BooleanArgument("quiet", "if the server should not print messages");
 
-		new HelpArgument(PORT, SLEEP_TIME, MESSAGES, QUIET).parse(args);
+		new HelpArgument(portArgument, sleepTimeArgument, messagesArgument, quietArgument).parse(args);
 
-		int port = PORT.parse(args);
-		int time = SLEEP_TIME.parse(args);
-		int messages = MESSAGES.parse(args);
-		boolean quiet = QUIET.parse(args);
+		int port = portArgument.parse(args);
+		int time = sleepTimeArgument.parse(args);
+		int messages = messagesArgument.parse(args);
+		boolean quiet = quietArgument.parse(args);
 
 		TCPIPTestServer control = new TCPIPTestServer(port, time, messages, !quiet);
 		control.connect();

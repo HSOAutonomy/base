@@ -63,16 +63,17 @@ public class TCPIPTestClient implements IObserver<byte[]>
 	 */
 	public static void main(String[] args)
 	{
-		StringArgument SERVER = new StringArgument("server", "localhost", "the ip address of the server");
-		IntegerArgument PORT = new IntegerArgument("port", 5790, 0, "the port to which the client tries to connect");
-		BooleanArgument REPLY_SERVER = new BooleanArgument("replyMessageServer",
+		StringArgument serverArgument = new StringArgument("server", "localhost", "the ip address of the server");
+		IntegerArgument portArgument =
+				new IntegerArgument("port", 5790, 0, "the port to which the client tries to connect");
+		BooleanArgument replyServerArgument = new BooleanArgument("replyMessageServer",
 				"the client should reply with the server message (otherwise it does with client message)");
 
-		new HelpArgument(SERVER, PORT, REPLY_SERVER).parse(args);
+		new HelpArgument(serverArgument, portArgument, replyServerArgument).parse(args);
 
-		String server = SERVER.parse(args);
-		int port = PORT.parse(args);
-		boolean replyServer = REPLY_SERVER.parse(args);
+		String server = serverArgument.parse(args);
+		int port = portArgument.parse(args);
+		boolean replyServer = replyServerArgument.parse(args);
 
 		TCPIPTestClient client = new TCPIPTestClient(server, port, replyServer);
 		try {
