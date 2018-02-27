@@ -20,10 +20,19 @@ public class PoseSpeed2D implements Serializable
 	/** the speed there in local coordinates */
 	private Vector2D speed;
 
+	/** which foot to place. true = left */
+	private boolean whichFoot;
+
 	public PoseSpeed2D(IPose2D pose, Vector2D speed)
+	{
+		this(pose, speed, true);
+	}
+
+	public PoseSpeed2D(IPose2D pose, Vector2D speed, boolean whichFoot)
 	{
 		this.pose = pose;
 		this.speed = speed;
+		this.whichFoot = whichFoot;
 	}
 
 	public IPose2D getPose()
@@ -36,9 +45,14 @@ public class PoseSpeed2D implements Serializable
 		return speed;
 	}
 
+	public boolean getWhichFoot()
+	{
+		return whichFoot;
+	}
+
 	@Override
 	public String toString()
 	{
-		return pose.toString() + " " + speed.toString();
+		return pose.toString() + " " + speed.toString() + " foot: " + ((whichFoot) ? "left" : "right");
 	}
 }
